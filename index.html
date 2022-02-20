@@ -4,11 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <div class="overlay"></div>
+  <section class="container">
+    <div class="row">
+      <div class="margin-auto">
+        <h1>weekly planner</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin-auto">
+        <button id="add-entry-button" class="add-entry-button">add entry</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-full">
+        <h2></h2>
+        <select name="days" id="week">
+          <option value="">Select a day</option>
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+        </select>
+        <input type="time">
+        <textarea id="description" class="display-block" cols="30" rows="5" placeholder="description"></textarea>
+        <input type="submit" class="submit display-block">
+      </div>
+    </div>
+  </section>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

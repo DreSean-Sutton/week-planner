@@ -1,0 +1,19 @@
+/* BASE CSS SELECTORS */
+
+.add-entry-button {
+  padding: 0.4rem 1rem;
+}
+
+/* CREATE ENTRY MODAL LAYOUT */
+
+.modal-layout {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* UTILITY CLASSES */
+
+.margin-auto {
+  margin: auto;
+}
