@@ -8,7 +8,9 @@ var $addEntryButton = document.querySelector('.add-entry-button');
 var $form = document.querySelector('form');
 var $modal = document.querySelector('#modal');
 var $overlay = document.querySelector('.overlay');
+
 $form.addEventListener('submit', event => {
+  debugger;
   event.preventDefault();
   var formValues = {
     day: $form.elements.week.value,
@@ -19,19 +21,22 @@ $form.addEventListener('submit', event => {
     if ($form.elements.week[i].getAttribute('data-day') === formValues.day.toLowerCase()) {
       var currentFormDataDay = $form.elements.week[i].getAttribute('data-day');
       formValues.dataDay = currentFormDataDay;
+      formValues.entryId = data[currentFormDataDay].nextEntryId;
+      data[currentFormDataDay].nextEntryId++;
+      break;
     }
   }
   data[currentFormDataDay].entries.push(formValues);
   console.log('formvalues result', formValues);
   $form.reset();
-  openModal();
+  addEntryModal();
 });
 
 $addEntryButton.addEventListener('click', event => {
-  openModal();
+  addEntryModal();
 });
 
-var openModal = () => {
+var addEntryModal = () => {
   if (modalIsOpen) {
     $modal.classList.add('hidden');
     $overlay.classList.add('hidden');
