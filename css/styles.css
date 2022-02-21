@@ -71,7 +71,7 @@ button {
   left: 0;
   background-color: palegoldenrod;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgb(10, 10, 10);
+  box-shadow: 0 0 10px rgb(5, 5, 5);
 }
 
 .submit {

@@ -10,7 +10,6 @@ var $modal = document.querySelector('#modal');
 var $overlay = document.querySelector('.overlay');
 
 $form.addEventListener('submit', event => {
-  debugger;
   event.preventDefault();
   var formValues = {
     day: $form.elements.week.value,
@@ -27,7 +26,6 @@ $form.addEventListener('submit', event => {
     }
   }
   data[currentFormDataDay].entries.push(formValues);
-  console.log('formvalues result', formValues);
   $form.reset();
   addEntryModal();
 });
