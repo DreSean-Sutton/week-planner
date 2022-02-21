@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* global data */
+/* exported data */
+
 var modalIsOpen = false;
 
 var $addEntryButton = document.querySelector('.add-entry-button');
@@ -17,6 +21,7 @@ $form.addEventListener('submit', event => {
       formValues.dataDay = currentFormDataDay;
     }
   }
+  data[currentFormDataDay].entries.push(formValues);
   console.log('formvalues result', formValues);
   $form.reset();
   openModal();

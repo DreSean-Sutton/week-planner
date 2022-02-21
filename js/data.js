@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* exported data */
 var data = {
   sunday: {
     nextEntryId: 1,
@@ -27,5 +29,5 @@ var data = {
     nextEntryId: 1,
     entries: []
   },
-  view: 'monday'
+  view: null
 };
