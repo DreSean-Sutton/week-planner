@@ -1,0 +1,94 @@
+:root {
+  --button-background-color: rgb(45, 77, 255);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+h1,
+h2 {
+  text-transform: capitalize;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+select,
+textarea {
+  border-radius: 4px;
+  border: 2px solid rgb(168, 168, 168);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--button-background-color);
+  outline: none;
+}
+
+button {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.add-entry-button {
+  font-size: 1rem;
+  color: white;
+  background-color: var(--button-background-color);
+  box-shadow: 2px 3px 4px grey;
+  border: none;
+  border-radius: 8px;
+  transition: transform 100ms;
+}
+
+.add-entry-button:hover {
+  transform: scale(1.2);
+}
+
+.add-entry-button:active {
+  transform: translateY(3px);
+}
+
+/* CREATE ENTRY MODAL LAYOUT */
+
+.overlay {
+  background-color: rgba(12 12 12 / 85%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-layout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: palegoldenrod;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(5, 5, 5);
+}
+
+.submit {
+  font-size: 0.8rem;
+  color: white;
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 1.5px 5px grey;
+  cursor: pointer;
+  transition: transform 100ms;
+}
+
+.submit:hover {
+  transform: scale(1.2);
+}
+
+.submit:active {
+  transform: translateY(3px);
+}

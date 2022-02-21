@@ -1,0 +1,28 @@
+.hidden {
+  display: none !important;
+}
+
+.display-block {
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-four-fifth {
+  width: 80%;
+}
+
+.column-half {
+  width: 50%;
+}

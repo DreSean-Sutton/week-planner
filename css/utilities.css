@@ -1,0 +1,59 @@
+/* BASE CSS SELECTORS */
+
+input,
+select {
+  display: inline-block;
+}
+
+.add-entry-button {
+  padding: 0.4rem 1rem;
+}
+
+/* CREATE ENTRY MODAL LAYOUT */
+
+.modal-layout {
+  width: 50%;
+  height: 250px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-layout h2 {
+  margin-top: 0;
+}
+
+.modal-layout .week {
+  height: 1.25rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-layout .time {
+  height: 1.25rem;
+}
+
+.description {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.submit {
+  margin-top: 1rem;
+  padding: 0.25rem 0.75rem;
+}
+
+/* UTILITY CLASSES */
+
+.margin-auto {
+  margin: auto;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}

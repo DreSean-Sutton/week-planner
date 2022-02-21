@@ -4,9 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <script src="main.js"></script>
+  <div class="overlay hidden"></div>
+  <section class="container">
+    <div class="row">
+      <div class="margin-auto">
+        <h1>weekly planner</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="margin-auto">
+        <button id="add-entry-button" class="add-entry-button">add entry</button>
+      </div>
+    </div>
+    <div id="modal" class="row modal-layout hidden">
+      <div class="column-four-fifth margin-auto">
+        <div class="text-align-center">
+          <h2>add entry</h2>
+        </div>
+        <form action="">
+          <select name="days" id="week" class="week" required>
+            <option value="">Select a day</option>
+            <option data-day="sunday" value="sunday">Sunday</option>
+            <option data-day="monday" value="monday">Monday</option>
+            <option data-day="tuesday" value="tuesday">Tuesday</option>
+            <option data-day="wednesday" value="wednesday">Wednesday</option>
+            <option data-day="thursday" value="thursday">Thursday</option>
+            <option data-day="friday" value="friday">Friday</option>
+            <option data-day="saturday" value="saturday">Saturday</option>
+          </select>
+          <input type="time" id="time" class="time-input" required>
+          <textarea id="description" class="description" cols="30" rows="5" placeholder="Description" required></textarea>
+          <div class="text-align-right">
+            <input id="new-entry-submit" type="submit" class="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
