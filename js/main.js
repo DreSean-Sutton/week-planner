@@ -11,7 +11,13 @@ $form.addEventListener('submit', event => {
     time: $form.elements.time.value,
     description: $form.elements.description.value
   };
-  console.log('formValues result', formValues);
+  for (let i = 1; i < $form.elements.week.length; i++) {
+    if ($form.elements.week[i].getAttribute('data-day') === formValues.day.toLowerCase()) {
+      var currentFormDataDay = $form.elements.week[i].getAttribute('data-day');
+      formValues.dataDay = currentFormDataDay;
+    }
+  }
+  console.log('formvalues result', formValues);
   $form.reset();
   openModal();
 });
