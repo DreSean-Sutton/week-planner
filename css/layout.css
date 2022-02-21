@@ -15,9 +15,13 @@
   display: flex;
 }
 
-/* .column-full {
+.column-full {
   width: 100%;
-} */
+}
+
+.column-four-fifth {
+  width: 80%;
+}
 
 .column-half {
   width: 50%;
