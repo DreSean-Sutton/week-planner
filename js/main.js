@@ -3,6 +3,12 @@
 /* exported data */
 
 var modalIsOpen = false;
+var overlay = false;
+
+var helperFunctions = {
+  addEntryModal: addEntryModal,
+  overlay: handleOverlay
+};
 
 var $addEntryButton = document.querySelector('.add-entry-button');
 var $form = document.querySelector('form');
@@ -27,21 +33,31 @@ $form.addEventListener('submit', event => {
   }
   data[currentFormDataDay].entries.push(formValues);
   $form.reset();
-  addEntryModal();
+  helperFunctions.addEntryModal();
+  helperFunctions.overlay();
 });
 
 $addEntryButton.addEventListener('click', event => {
-  addEntryModal();
+  helperFunctions.addEntryModal();
+  helperFunctions.overlay();
 });
 
-var addEntryModal = () => {
+function addEntryModal() {
   if (modalIsOpen) {
     $modal.classList.add('hidden');
-    $overlay.classList.add('hidden');
     modalIsOpen = false;
   } else {
     $modal.classList.remove('hidden');
-    $overlay.classList.remove('hidden');
     modalIsOpen = true;
   }
-};
+}
+
+function handleOverlay() {
+  if (overlay) {
+    $overlay.classList.add('hidden');
+    overlay = false;
+  } else {
+    $overlay.classList.remove('hidden');
+    overlay = true;
+  }
+}

@@ -82,6 +82,7 @@ button {
   border-radius: 6px;
   box-shadow: 1px 1.5px 5px grey;
   cursor: pointer;
+  outline: none;
   transition: transform 100ms;
 }
 
